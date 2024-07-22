@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<context:annotation-config></context:annotation-config>
+		
+    <bean class="com.edubridge.springapp1.beans.IPhone" id="iphone">
+    	<constructor-arg value="M1234"></constructor-arg>
+       	<constructor-arg value="Black"></constructor-arg>
+       	<constructor-arg value="65000"></constructor-arg>
+    </bean>
+    
+    <bean class="com.edubridge.springapp1.beans.SamsungMobile" id="samsungMobile">
+    	<property name="modelNo" value="M10101"></property>
+    	<property name="color" value="Silver"></property>
+    	<property name="price" value="45000"></property>
+    </bean>
+    
+    <bean class="com.edubridge.springapp1.beans.Course" id="course">
+    	<property name="courseId" value="1001"></property>
+    	<property name="courseName" value="JFS"></property>
+    	<property name="courseDuration" value="200"></property>
+    </bean>
+    
+    <bean class="com.edubridge.springapp1.beans.Student" id="student">
+    	<property name="studentId" value="123"></property>
+    	<property name="studentName" value="Jones"></property>
+    	<!-- <property name="studentCourse"  ref="course"></property> -->
+    </bean>
+    
+ </beans>
